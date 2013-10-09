@@ -21,13 +21,24 @@
 # Registers:
 
 # File marks:
-'0  66  63  ~/README
+'0  127  12  ~/os161/kern/startup/main.c
+'1  66  63  ~/README
 
 # Jumplist (newest first):
+-'  127  12  ~/os161/kern/startup/main.c
+-'  1  0  ~/os161/kern/startup/main.c
+-'  66  63  ~/README
+-'  1  0  ~/README
 -'  66  63  ~/README
 -'  1  0  ~/README
 
 # History of marks within files (newest to oldest):
+
+> ~/os161/kern/startup/main.c
+	"	127	12
+	^	127	13
+	.	104	12
+	+	104	12
 
 > ~/README
 	"	66	63
