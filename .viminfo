@@ -7,10 +7,25 @@
 
 # hlsearch on (H) or off (h):
 ~h
+# Last Search Pattern:
+~Msle0~/\<args\>
+
 # Command Line History (newest to oldest):
 :wq
+:q
+:w
+:q!
+:set nu
 
 # Search String History (newest to oldest):
+? \<args\>
+?/thread
+?/proc_create
+?/cmd_prog
+??km
+???
+??/
+??t
 
 # Expression History (newest to oldest):
 
@@ -19,26 +34,268 @@
 # Input Line History (newest to oldest):
 
 # Registers:
+""-	CHAR	0
+	"
 
 # File marks:
-'0  127  12  ~/os161/kern/startup/main.c
-'1  66  63  ~/README
+'0  5  36  ~/bin/os161_install.sh
+'1  4  68  ~/bin/os161_install.sh
+'2  60  116  ~/.bashrc
+'3  140  0  ~/os161/kern/dev/lamebus/lamebus.h
+'4  197  0  ~/os161/kern/compile/ASST0/autoconf.c
+'5  98  3  ~/os161/build/install/include/kern/sfs.h
+'6  100  1  ~/os161/build/install/include/kern/fcntl.h
+'7  45  1  ~/os161/build/install/include/kern/types.h
+'8  523  20  ~/os161/kern/startup/menu.c
+'9  720  0  ~/os161/kern/startup/menu.c
 
 # Jumplist (newest first):
--'  127  12  ~/os161/kern/startup/main.c
+-'  5  36  ~/bin/os161_install.sh
+-'  1  0  ~/bin/os161_install.sh
+-'  4  68  ~/bin/os161_install.sh
+-'  60  116  ~/.bashrc
+-'  1  0  ~/.bashrc
+-'  140  0  ~/os161/kern/dev/lamebus/lamebus.h
+-'  166  0  ~/os161/kern/dev/lamebus/lamebus.h
+-'  1  0  ~/os161/kern/dev/lamebus/lamebus.h
+-'  197  0  ~/os161/kern/compile/ASST0/autoconf.c
+-'  367  3  ~/os161/kern/compile/ASST0/autoconf.c
+-'  1  0  ~/os161/kern/compile/ASST0/autoconf.c
+-'  98  3  ~/os161/build/install/include/kern/sfs.h
+-'  83  1  ~/os161/build/install/include/kern/sfs.h
+-'  1  0  ~/os161/build/install/include/kern/sfs.h
+-'  100  1  ~/os161/build/install/include/kern/fcntl.h
+-'  48  0  ~/os161/build/install/include/kern/fcntl.h
+-'  1  0  ~/os161/build/install/include/kern/fcntl.h
+-'  45  1  ~/os161/build/install/include/kern/types.h
+-'  1  0  ~/os161/build/install/include/kern/types.h
+-'  523  20  ~/os161/kern/startup/menu.c
+-'  1  0  ~/os161/kern/startup/menu.c
+-'  720  0  ~/os161/kern/startup/menu.c
+-'  486  0  ~/os161/kern/startup/menu.c
+-'  538  1  ~/os161/kern/startup/menu.c
+-'  667  0  ~/os161/kern/startup/menu.c
+-'  719  0  ~/os161/kern/startup/menu.c
+-'  709  0  ~/os161/kern/startup/menu.c
+-'  214  0  ~/os161/kern/startup/main.c
 -'  1  0  ~/os161/kern/startup/main.c
+-'  54  0  ~/os161/kern/include/thread.h
+-'  1  0  ~/os161/kern/include/thread.h
+-'  87  0  ~/os161/kern/include/proc.h
+-'  1  0  ~/os161/kern/include/proc.h
+-'  1  0  ~/os161/kern/include/spinlock.h
+-'  5  25  ~/os161/kern/startup/hello.c
+-'  1  0  ~/os161/kern/startup/hello.c
+-'  52  13  ~/os161/kern/startup/main.c
+-'  108  0  ~/os161/kern/startup/main.c
+-'  110  0  ~/os161/kern/startup/main.c
+-'  51  19  ~/os161/kern/startup/main.c
+-'  109  1  ~/os161/kern/startup/main.c
+-'  61  0  ~/os161/kern/startup/main.c
+-'  55  0  ~/os161/kern/startup/main.c
+-'  14  0  ~/os161/kern/proc/proc.c
+-'  1  0  ~/os161/kern/proc/proc.c
+-'  385  21  ~/os161/kern/conf/conf.kern
+-'  1  0  ~/os161/kern/conf/conf.kern
+-'  54  0  ~/os161/kern/startup/main.c
+-'  95  0  ~/os161/kern/startup/main.c
+-'  131  12  ~/os161/kern/startup/main.c
 -'  66  63  ~/README
 -'  1  0  ~/README
 -'  66  63  ~/README
 -'  1  0  ~/README
+-'  66  63  ~/README
+-'  1  0  ~/README
+-'  66  63  ~/README
+-'  1  0  ~/README
+-'  66  63  ~/README
+-'  1  0  ~/README
+-'  66  63  ~/README
+-'  1  0  ~/README
+-'  66  63  ~/README
+-'  1  0  ~/README
+-'  66  63  ~/README
+-'  1  0  ~/README
+-'  128  12  ~/os161/kern/startup/main.c
+-'  66  63  ~/README
+-'  1  0  ~/README
+-'  66  63  ~/README
+-'  1  0  ~/README
+-'  66  63  ~/README
+-'  1  0  ~/README
+-'  66  63  ~/README
+-'  1  0  ~/README
+-'  66  63  ~/README
+-'  1  0  ~/README
+-'  66  63  ~/README
+-'  1  0  ~/README
+-'  66  63  ~/README
+-'  1  0  ~/README
+-'  66  63  ~/README
+-'  1  0  ~/README
+-'  66  63  ~/README
+-'  1  0  ~/README
+-'  66  63  ~/README
+-'  1  0  ~/README
+-'  66  63  ~/README
+-'  1  0  ~/README
+-'  66  63  ~/README
+-'  1  0  ~/README
+-'  66  63  ~/README
+-'  1  0  ~/README
+-'  66  63  ~/README
+-'  1  0  ~/README
+-'  66  63  ~/README
+-'  1  0  ~/README
+-'  66  63  ~/README
 
 # History of marks within files (newest to oldest):
 
+> ~/bin/os161_install.sh
+	"	5	36
+	^	5	37
+	.	5	36
+	+	4	68
+	+	1	8
+	+	2	72
+	+	3	41
+	+	5	36
+
+> ~/.bashrc
+	"	60	116
+	^	60	117
+	.	60	116
+	+	60	116
+
+> ~/os161/kern/dev/lamebus/lamebus.h
+	"	140	0
+
+> ~/os161/kern/compile/ASST0/autoconf.c
+	"	197	0
+	^	171	5
+
+> ~/os161/build/install/include/kern/sfs.h
+	"	98	3
+
+> ~/os161/build/install/include/kern/fcntl.h
+	"	100	1
+
+> ~/os161/build/install/include/kern/types.h
+	"	45	1
+
+> ~/os161/kern/startup/menu.c
+	"	523	20
+	^	523	21
+	.	523	20
+	+	453	27
+	+	597	19
+	+	598	25
+	+	486	1
+	+	46	39
+	+	46	35
+	+	46	67
+	+	46	20
+	+	518	2
+	+	527	0
+	+	526	0
+	+	522	22
+	+	525	9
+	+	523	19
+	+	47	0
+	+	523	37
+	+	523	20
+	+	524	0
+	+	523	20
+
+> ~/os161/kern/include/printtestmessage.c
+	"	7	9
+	^	7	10
+	.	7	9
+	+	1	41
+	+	8	0
+	+	6	0
+	+	5	10
+	+	1	17
+	+	7	9
+
+> ~/os161/kern/compile/ASST0/Makefile
+	"	1	0
+	^	1	1
+	.	1	0
+	+	1	0
+
+> ~/os161/kern/test/fstest.c
+	"	23	1
+
 > ~/os161/kern/startup/main.c
-	"	127	12
-	^	127	13
-	.	104	12
-	+	104	12
+	"	175	0
+	^	52	14
+	.	52	13
+	+	105	12
+	+	54	17
+	+	110	16
+	+	54	0
+	+	52	18
+	+	51	20
+	+	51	20
+	+	52	13
+
+> ~/os161/kern/include/test.h
+	"	82	34
+	^	82	35
+	.	82	34
+	+	81	23
+	+	82	34
+
+> ~/os161/kern/vfs/vnode.c
+	"	101	0
+
+> ~/os161/kern/vfs/vfscwd.c
+	"	184	0
+
+> ~/os161/kern/test/threadtest.c
+	"	120	0
+	a	119	0
+
+> ~/os161/kern/include/thread.h
+	"	54	0
+
+> ~/os161/kern/thread/clock.c
+	"	97	2
+
+> ~/os161/kern/thread/thread.c
+	"	526	0
+
+> ~/os161/kern/proc/proc.c
+	"	198	11
+
+> ~/os161/kern/arch/mips/syscall/syscall.c
+	"	149	1
+
+> ~/os161/kern/arch/sys161/dev/lamebus_machdep.c
+	"	262	0
+
+> ~/os161/kern/include/proc.h
+	"	87	0
+
+> ~/os161/kern/include/spinlock.h
+	"	1	0
+
+> ~/os161/kern/startup/hello.c
+	"	5	25
+	^	5	26
+	.	5	25
+	+	1	18
+	+	6	0
+	+	5	25
+	+	6	0
+	+	5	25
+
+> ~/os161/kern/conf/conf.kern
+	"	385	21
+	^	385	22
+	.	385	21
+	+	385	21
 
 > ~/README
 	"	66	63

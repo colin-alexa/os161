@@ -78,6 +78,9 @@ int malloctest(int, char **);
 int mallocstress(int, char **);
 int nettest(int, char **);
 
+/*TEST added for lab5*/
+int printtestmessage(int, char **);
+
 /* Routine for running a user-level program. */
 int runprogram(char *progname);
 

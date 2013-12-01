@@ -57,7 +57,7 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-export PATH="/etc/TESC/holodeck/sys161/bin:/etc/TESC/holodeck/sys161/tools/bin:/etc/TESC/holodeck/bin:$PATH"
+export PATH="/etc/TESC/holodeck/sys161/bin:/etc/TESC/holodeck/sys161/tools/bin:/etc/TESC/holodeck/bin:$PATH:$HOME/bin"
 
 echo "Welcome to the Holodeck."
 echo ""

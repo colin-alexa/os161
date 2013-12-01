@@ -450,6 +450,7 @@ cmd_opsmenu(int n, char **a)
 }
 
 static const char *testmenu[] = {
+	"[gg]  My \"Test\"						 ",
 	"[at]  Array test                    ",
 	"[bt]  Bitmap test                   ",
 	"[km1] Kernel malloc test            ",
@@ -512,6 +513,18 @@ cmd_mainmenu(int n, char **a)
 	showmenu("OS/161 kernel menu", mainmenu);
 	return 0;
 }
+
+////////////////////////////////////////
+//
+// TEST for lab5
+
+int printtestmessage(int c, char** args){
+	for(int i=0;i<c;i++){
+		kprintf("%c \n", **(args+i));
+	}
+	return 0;
+}
+
 
 ////////////////////////////////////////
 //
@@ -580,6 +593,9 @@ static struct {
 	{ "fs3",	writestress },
 	{ "fs4",	writestress2 },
 	{ "fs5",	createstress },
+
+	/*TEST from LAB5*/
+	{ "gg", printtestmessage },
 
 	{ NULL, NULL }
 };

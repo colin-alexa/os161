@@ -1,0 +1,5 @@
+#!/bin/sh
+(cd $HOME/os161; ./configure --ostree=$HOME/os161/root --toolprefix=sos-)
+(cd $HOME/os161/kern/conf; ./config ASST0)
+(cd $HOME/os161/kern/compile/ASST0;pmake depend;pmake;pmake install;)
+(cd $HOME/os161/;pmake;pmake install)
