@@ -64,3 +64,5 @@ echo ""
 fortune /etc/TESC/holodeck/startrek
 echo ""
 
+echo "Notes: bootstrap to install everything; os161/root$ sys161 kernel to run"
+

@@ -44,7 +44,7 @@
 #include "opt-synchprobs.h"
 #include "opt-sfs.h"
 #include "opt-net.h"
-
+#include "testmessage.c"
 /*
  * In-kernel menu and command dispatcher.
  */
@@ -451,6 +451,7 @@ cmd_opsmenu(int n, char **a)
 
 static const char *testmenu[] = {
 	"[gg]  My \"Test\"						 ",
+	"[mtt] My thread test                ",
 	"[at]  Array test                    ",
 	"[bt]  Bitmap test                   ",
 	"[km1] Kernel malloc test            ",
@@ -518,12 +519,20 @@ cmd_mainmenu(int n, char **a)
 //
 // TEST for lab5
 
-int printtestmessage(int c, char** args){
-	for(int i=0;i<c;i++){
-		kprintf("%c \n", **(args+i));
-	}
-	return 0;
-}
+//void printchars(char* word){
+//	for (int i=0; word[i] != 0; i++){
+//		kprintf(word[i]);
+//	}
+//	return;
+//}
+
+//int testmessage(int c, char** args){
+//	for(int i=0;i<c;i++){
+//		printchars(args[i]);
+//		kprintf('\n');
+//	}
+//	return 0;
+//}
 
 
 ////////////////////////////////////////
@@ -594,9 +603,15 @@ static struct {
 	{ "fs4",	writestress2 },
 	{ "fs5",	createstress },
 
-	/*TEST from LAB5*/
-	{ "gg", printtestmessage },
+//////////////////////////////
+//
+// Tests that I've added
+//
+/////////
 
+	/*TEST from LAB5*/
+	{ "gg", testmessage },
+   { "mtt", my_thread_test },
 	{ NULL, NULL }
 };
 

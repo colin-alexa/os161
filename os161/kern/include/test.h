@@ -78,8 +78,14 @@ int malloctest(int, char **);
 int mallocstress(int, char **);
 int nettest(int, char **);
 
-/*TEST added for lab5*/
-int printtestmessage(int, char **);
+//////////////////////////////
+//
+// Tests added by Colin (me!)
+//
+
+int testmessage(int, char **);
+int my_thread_test(int, char**);
+
 
 /* Routine for running a user-level program. */
 int runprogram(char *progname);

@@ -12,9 +12,10 @@
 
 # Command Line History (newest to oldest):
 :wq
-:q
 :w
+:q
 :q!
+:w bootstrap_test
 :set nu
 
 # Search String History (newest to oldest):
@@ -34,27 +35,78 @@
 # Input Line History (newest to oldest):
 
 # Registers:
+"0	CHAR	0
+	int echoargs(void* ptr, unsigned long val){
+		kprintf(ptr);
+		kprintf(val);
+		return 0;
+	}
+"1	LINE	0
+	int echoargs(void* ptr, unsigned long val){
+		kprintf(ptr);
+		kprintf(val);
+		return 0;
+	}
+"2	LINE	0
+	int echoargs(void* ptr, unsigned long val){
+		kprintf(ptr);
+		kprintf(val);
+		return 0;
+	}
 ""-	CHAR	0
-	"
+	r
 
 # File marks:
-'0  5  36  ~/bin/os161_install.sh
-'1  4  68  ~/bin/os161_install.sh
-'2  60  116  ~/.bashrc
-'3  140  0  ~/os161/kern/dev/lamebus/lamebus.h
-'4  197  0  ~/os161/kern/compile/ASST0/autoconf.c
-'5  98  3  ~/os161/build/install/include/kern/sfs.h
-'6  100  1  ~/os161/build/install/include/kern/fcntl.h
-'7  45  1  ~/os161/build/install/include/kern/types.h
-'8  523  20  ~/os161/kern/startup/menu.c
-'9  720  0  ~/os161/kern/startup/menu.c
+'0  216  0  ~/os161/kern/thread/synch.c
+'1  1  0  ~/os161/kern/test/mythreadtest.c
+'2  614  26  ~/os161/kern/startup/menu.c
+'3  146  0  ~/os161/kern/test/threadtest.c
+'4  624  0  ~/os161/kern/startup/menu.c
+'5  1  0  ~/os161/kern/include/testmessage.c
+'6  12  0  ~/os161/kern/include/testmessage.c
+'7  75  0  ~/os161/kern/startup/menu.c
+'8  172  0  ~/os161/kern/startup/main.c
+'9  4  34  ~/bin/bootstrap
 
 # Jumplist (newest first):
+-'  216  0  ~/os161/kern/thread/synch.c
+-'  199  0  ~/os161/kern/thread/synch.c
+-'  1  0  ~/os161/kern/thread/synch.c
+-'  1  0  ~/os161/kern/test/mythreadtest.c
+-'  10  47  ~/os161/kern/test/mythreadtest.c
+-'  614  26  ~/os161/kern/startup/menu.c
+-'  1  0  ~/os161/kern/startup/menu.c
+-'  146  0  ~/os161/kern/test/threadtest.c
+-'  1  0  ~/os161/kern/test/threadtest.c
+-'  624  0  ~/os161/kern/startup/menu.c
+-'  1  0  ~/os161/kern/include/testmessage.c
+-'  12  0  ~/os161/kern/include/testmessage.c
+-'  75  0  ~/os161/kern/startup/menu.c
+-'  172  0  ~/os161/kern/startup/main.c
+-'  1  0  ~/os161/kern/startup/main.c
+-'  4  34  ~/bin/bootstrap
+-'  1  0  ~/bin/bootstrap
+-'  15  44  ~/os161/kern/include/testmessage.c
+-'  10  0  ~/os161/kern/include/testmessage.c
+-'  1  0  ~/os161/kern/include/printtestmessage.c
+-'  3  0  ~/os161/kern/include/printtestmessage.c
+-'  581  0  ~/os161/kern/startup/menu.c
+-'  10  13  ~/os161/kern/include/printtestmessage.c
+-'  4  63  ~/os161/kern/include/printtestmessage.c
+-'  522  1  ~/os161/kern/startup/menu.c
+-'  529  0  ~/os161/kern/startup/menu.c
+-'  60  0  ~/os161/kern/startup/menu.c
+-'  47  27  ~/os161/kern/startup/menu.c
+-'  523  26  ~/os161/kern/startup/menu.c
+-'  1  0  ./os161/kern/startup/menu.c
+-'  532  15  ~/os161/kern/startup/menu.c
+-'  1  0  ~/os161/kern/startup/menu.com
+-'  67  63  ~/.bashrc
+-'  1  0  ~/.bashrc
 -'  5  36  ~/bin/os161_install.sh
 -'  1  0  ~/bin/os161_install.sh
 -'  4  68  ~/bin/os161_install.sh
 -'  60  116  ~/.bashrc
--'  1  0  ~/.bashrc
 -'  140  0  ~/os161/kern/dev/lamebus/lamebus.h
 -'  166  0  ~/os161/kern/dev/lamebus/lamebus.h
 -'  1  0  ~/os161/kern/dev/lamebus/lamebus.h
@@ -69,16 +121,14 @@
 -'  1  0  ~/os161/build/install/include/kern/fcntl.h
 -'  45  1  ~/os161/build/install/include/kern/types.h
 -'  1  0  ~/os161/build/install/include/kern/types.h
--'  523  20  ~/os161/kern/startup/menu.c
--'  1  0  ~/os161/kern/startup/menu.c
--'  720  0  ~/os161/kern/startup/menu.c
--'  486  0  ~/os161/kern/startup/menu.c
--'  538  1  ~/os161/kern/startup/menu.c
--'  667  0  ~/os161/kern/startup/menu.c
--'  719  0  ~/os161/kern/startup/menu.c
--'  709  0  ~/os161/kern/startup/menu.c
+-'  531  20  ~/os161/kern/startup/menu.c
+-'  735  0  ~/os161/kern/startup/menu.c
+-'  487  0  ~/os161/kern/startup/menu.c
+-'  547  1  ~/os161/kern/startup/menu.c
+-'  682  0  ~/os161/kern/startup/menu.c
+-'  734  0  ~/os161/kern/startup/menu.c
+-'  724  0  ~/os161/kern/startup/menu.c
 -'  214  0  ~/os161/kern/startup/main.c
--'  1  0  ~/os161/kern/startup/main.c
 -'  54  0  ~/os161/kern/include/thread.h
 -'  1  0  ~/os161/kern/include/thread.h
 -'  87  0  ~/os161/kern/include/proc.h
@@ -119,37 +169,284 @@
 -'  128  12  ~/os161/kern/startup/main.c
 -'  66  63  ~/README
 -'  1  0  ~/README
--'  66  63  ~/README
--'  1  0  ~/README
--'  66  63  ~/README
--'  1  0  ~/README
--'  66  63  ~/README
--'  1  0  ~/README
--'  66  63  ~/README
--'  1  0  ~/README
--'  66  63  ~/README
--'  1  0  ~/README
--'  66  63  ~/README
--'  1  0  ~/README
--'  66  63  ~/README
--'  1  0  ~/README
--'  66  63  ~/README
--'  1  0  ~/README
--'  66  63  ~/README
--'  1  0  ~/README
--'  66  63  ~/README
--'  1  0  ~/README
--'  66  63  ~/README
--'  1  0  ~/README
--'  66  63  ~/README
--'  1  0  ~/README
--'  66  63  ~/README
--'  1  0  ~/README
--'  66  63  ~/README
--'  1  0  ~/README
--'  66  63  ~/README
 
 # History of marks within files (newest to oldest):
+
+> ~/os161/kern/thread/synch.c
+	"	216	0
+
+> ~/os161/kern/test/mythreadtest.c
+	"	1	0
+	^	15	14
+	.	15	13
+	+	11	0
+	+	10	323
+	+	10	306
+	+	10	278
+	+	10	308
+	+	10	317
+	+	10	276
+	+	10	270
+	+	10	245
+	+	10	191
+	+	10	177
+	+	10	251
+	+	10	175
+	+	7	1
+	+	7	17
+	+	8	8
+	+	10	1
+	+	10	66
+	+	10	124
+	+	10	109
+	+	10	166
+	+	1	0
+	+	5	25
+	+	10	44
+	+	5	14
+	+	11	0
+	+	8	7
+	+	8	7
+	+	31	0
+	+	30	46
+	+	30	4
+	+	30	44
+	+	30	28
+	+	30	2
+	+	29	2
+	+	28	38
+	+	26	5
+	+	27	4
+	+	28	8
+	+	25	0
+	+	18	2
+	+	20	2
+	+	21	2
+	+	22	2
+	+	23	22
+	+	24	10
+	+	26	3
+	+	27	7
+	+	28	8
+	+	29	5
+	+	23	23
+	+	9	0
+	+	20	14
+	+	15	15
+	+	20	14
+	+	15	31
+	+	17	28
+	+	23	37
+	+	9	39
+	+	21	26
+	+	17	20
+	+	27	15
+	+	24	11
+	+	30	17
+	+	2	0
+	+	17	6
+	+	31	0
+	+	20	18
+	+	15	13
+
+> ~/os161/kern/include/test.h
+	"	87	31
+	^	87	32
+	.	87	31
+	+	81	23
+	+	86	4
+	+	83	29
+	+	86	0
+	+	88	0
+	+	87	31
+
+> ~/os161/kern/test/threadtest.c
+	"	92	0
+	a	119	0
+
+> ~/os161/kern/startup/menu.c
+	"	614	26
+	^	614	27
+	.	614	26
+	+	453	27
+	+	612	19
+	+	613	25
+	+	487	1
+	+	46	39
+	+	46	35
+	+	46	67
+	+	46	20
+	+	519	2
+	+	536	0
+	+	534	10
+	+	530	22
+	+	534	9
+	+	531	19
+	+	47	0
+	+	531	37
+	+	531	20
+	+	533	0
+	+	531	20
+	+	522	28
+	+	527	0
+	+	526	0
+	+	524	20
+	+	524	1
+	+	526	6
+	+	524	18
+	+	526	7
+	+	531	22
+	+	532	15
+	+	523	26
+	+	524	19
+	+	523	27
+	+	47	27
+	+	535	0
+	+	529	1
+	+	531	0
+	+	530	1
+	+	531	1
+	+	532	1
+	+	533	1
+	+	534	1
+	+	535	1
+	+	527	1
+	+	526	1
+	+	525	1
+	+	524	1
+	+	523	1
+	+	522	1
+	+	632	0
+	+	454	39
+	+	614	0
+	+	606	30
+	+	610	4
+	+	608	2
+	+	611	0
+	+	614	26
+
+> ~/os161/kern/include/testmessage.c
+	"	21	0
+	^	17	15
+	.	18	0
+	+	22	0
+	+	1	17
+	+	18	82
+	+	1	32
+	+	1	60
+	+	1	24
+	+	1	68
+	+	12	94
+	+	12	73
+	+	18	25
+	+	12	106
+	+	12	23
+	+	12	0
+	+	12	27
+	+	12	6
+	+	12	0
+	+	2	0
+	+	4	46
+	+	12	3
+	+	6	15
+	+	4	36
+	+	6	47
+	+	10	0
+	+	10	0
+	+	4	3
+	+	6	3
+	+	16	0
+	+	15	15
+	+	2	19
+	+	18	44
+	+	8	14
+	+	18	1
+	+	13	2
+	+	14	2
+	+	15	2
+	+	16	1
+	+	15	1
+	+	14	1
+	+	13	1
+	+	12	47
+	+	16	4
+	+	16	1
+	+	13	1
+	+	12	40
+	+	15	13
+	+	13	0
+	+	18	0
+	+	16	1
+	+	13	1
+	+	12	71
+	+	12	36
+	+	12	64
+	+	12	51
+	+	12	56
+	+	12	40
+	+	13	12
+	+	15	15
+	+	16	2
+	+	17	15
+	+	18	0
+
+> ~/os161/kern/startup/main.c
+	"	172	0
+	^	52	14
+	.	52	13
+	+	105	12
+	+	54	17
+	+	110	16
+	+	54	0
+	+	52	18
+	+	51	20
+	+	51	20
+	+	52	13
+
+> ~/bin/bootstrap
+	"	4	34
+	^	4	35
+	.	4	34
+	+	3	41
+	+	4	34
+
+> ~/os161/kern/thread/thread.c
+	"	490	0
+
+> ~/os161/kern/include/printtestmessage.c
+	"	1	0
+	^	10	14
+	.	10	13
+	+	1	41
+	+	6	0
+	+	4	64
+	+	4	38
+	+	1	17
+	+	5	9
+	+	4	63
+	+	13	0
+	+	8	4
+	+	4	11
+	+	3	4
+	+	8	11
+	+	4	58
+	+	8	40
+	+	9	13
+	+	4	76
+	+	10	13
+
+> ./os161/kern/startup/menu.c
+	"	1	0
+
+> ~/os161/kern/startup/menu.com
+	"	1	0
+
+> ~/.bashrc
+	"	67	63
+	^	67	64
+	.	67	63
+	+	60	116
+	+	67	63
 
 > ~/bin/os161_install.sh
 	"	5	36
@@ -160,12 +457,6 @@
 	+	2	72
 	+	3	41
 	+	5	36
-
-> ~/.bashrc
-	"	60	116
-	^	60	117
-	.	60	116
-	+	60	116
 
 > ~/os161/kern/dev/lamebus/lamebus.h
 	"	140	0
@@ -183,41 +474,6 @@
 > ~/os161/build/install/include/kern/types.h
 	"	45	1
 
-> ~/os161/kern/startup/menu.c
-	"	523	20
-	^	523	21
-	.	523	20
-	+	453	27
-	+	597	19
-	+	598	25
-	+	486	1
-	+	46	39
-	+	46	35
-	+	46	67
-	+	46	20
-	+	518	2
-	+	527	0
-	+	526	0
-	+	522	22
-	+	525	9
-	+	523	19
-	+	47	0
-	+	523	37
-	+	523	20
-	+	524	0
-	+	523	20
-
-> ~/os161/kern/include/printtestmessage.c
-	"	7	9
-	^	7	10
-	.	7	9
-	+	1	41
-	+	8	0
-	+	6	0
-	+	5	10
-	+	1	17
-	+	7	9
-
 > ~/os161/kern/compile/ASST0/Makefile
 	"	1	0
 	^	1	1
@@ -227,44 +483,17 @@
 > ~/os161/kern/test/fstest.c
 	"	23	1
 
-> ~/os161/kern/startup/main.c
-	"	175	0
-	^	52	14
-	.	52	13
-	+	105	12
-	+	54	17
-	+	110	16
-	+	54	0
-	+	52	18
-	+	51	20
-	+	51	20
-	+	52	13
-
-> ~/os161/kern/include/test.h
-	"	82	34
-	^	82	35
-	.	82	34
-	+	81	23
-	+	82	34
-
 > ~/os161/kern/vfs/vnode.c
 	"	101	0
 
 > ~/os161/kern/vfs/vfscwd.c
 	"	184	0
 
-> ~/os161/kern/test/threadtest.c
-	"	120	0
-	a	119	0
-
 > ~/os161/kern/include/thread.h
 	"	54	0
 
 > ~/os161/kern/thread/clock.c
 	"	97	2
-
-> ~/os161/kern/thread/thread.c
-	"	526	0
 
 > ~/os161/kern/proc/proc.c
 	"	198	11

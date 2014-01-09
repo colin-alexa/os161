@@ -1,4 +1,4 @@
-cscope 15 $HOME               0000917450
+cscope 15 $HOME               0000917759
 	@os161/build/install/hostinclude/hostcompat.h
 
 31 
@@ -17841,7 +17841,7 @@ _OPT_VM_H_
 
 2 c⁄° 
 	gbuûdvîsi⁄
- = 6;
+ = 18;
 
 3 c⁄° 
 	gbuûdc⁄fig
@@ -43401,6 +43401,58 @@ maöbus_ªboŸ
 maöbus_∑nic
 ();
 
+	@os161/kern/include/printtestmessage.c
+
+1 
+	~<ã°.h
+>
+
+3 
+	$ã°mesßge
+(
+c
+, ** 
+¨gs
+){
+
+4 
+	`thªad_f‹k
+("ã°Åhªad fú°árg", 
+NULL
+, 
+echﬂrgs
+, "ã°Åhªad fouπhárg", 
+c
+)
+
+6 
+	}
+}
+
+8 
+	$echﬂrgs
+(* 
+±r
+, 
+vÆ
+){
+
+9 
+	`k¥ötf
+(
+±r
+);
+
+10 
+	`k¥ötf
+(
+vÆ
+);
+
+12 
+	}
+}
+
 	@os161/kern/include/proc.h
 
 30 #i‚de‡
@@ -44638,18 +44690,22 @@ mÆloc°ªss
 (, **);
 
 82 
+ã°mesßge
+(, **);
+
+85 
 ru≈rogøm
 (*
 ¥og«me
 );
 
-85 
+88 
 míu
 (*
 ¨g°r
 );
 
-88 
+91 
 kmaö
 (*
 boŸ°rög
@@ -51411,6 +51467,10 @@ RB_POWEROFF
 	~"›t-√t.h
 "
 
+47 
+	~"ã°mesßge.c
+"
+
 52 
 	#_PATH_SHELL
  "/bö/sh"
@@ -52409,11 +52469,11 @@ maömíu
 	}
 }
 
-522 c⁄° *
+542 c⁄° *
 	m«me
 ;
 
-523 (*
+543 (*
 	mfunc
 )(
 	m«rgs
@@ -52421,193 +52481,193 @@ maömíu
 	m¨gs
 );
 
-524 } 
+544 } 
 	gcmdèbÀ
 [] = {
 
-526 { "?", 
+546 { "?", 
 cmd_maömíu
  },
 
-527 { "h", 
+547 { "h", 
 cmd_maömíu
  },
 
-528 { "hñp", 
+548 { "hñp", 
 cmd_maömíu
  },
 
-529 { "?o", 
+549 { "?o", 
 cmd_›smíu
  },
 
-530 { "?t", 
+550 { "?t", 
 cmd_ã°míu
  },
 
-533 { "s", 
+553 { "s", 
 cmd_shñl
  },
 
-534 { "p", 
+554 { "p", 
 cmd_¥og
  },
 
-535 { "mou¡", 
+555 { "mou¡", 
 cmd_mou¡
  },
 
-536 { "unmou¡", 
+556 { "unmou¡", 
 cmd_unmou¡
  },
 
-537 { "boŸfs", 
+557 { "boŸfs", 
 cmd_boŸfs
  },
 
-538 { "pf", 
+558 { "pf", 
 ¥ötfûe
  },
 
-539 { "cd", 
+559 { "cd", 
 cmd_chdú
  },
 
-540 { "pwd", 
+560 { "pwd", 
 cmd_pwd
  },
 
-541 { "sync", 
+561 { "sync", 
 cmd_sync
  },
 
-542 { "∑nic", 
+562 { "∑nic", 
 cmd_∑nic
  },
 
-543 { "q", 
+563 { "q", 
 cmd_quô
  },
 
-544 { "exô", 
+564 { "exô", 
 cmd_quô
  },
 
-545 { "hÆt", 
+565 { "hÆt", 
 cmd_quô
  },
 
-547 #i‡
+567 #i‡
 OPT_SYNCHPROBS
 
 
-549 { "•1", 
+569 { "•1", 
 whÆem©ög
  },
 
-550 #ifde‡
+570 #ifde‡
 UW
 
 
-551 { "•2", 
+571 { "•2", 
 ˇtmou£
  },
 
-556 { "kh", 
+576 { "kh", 
 cmd_khóp°©s
  },
 
-559 { "©", 
+579 { "©", 
 ¨øyã°
  },
 
-560 { "bt", 
+580 { "bt", 
 bôm≠ã°
  },
 
-561 { "km1", 
+581 { "km1", 
 mÆlo˘e°
  },
 
-562 { "km2", 
+582 { "km2", 
 mÆloc°ªss
  },
 
-563 #i‡
+583 #i‡
 OPT_NET
 
 
-564 { "√t", 
+584 { "√t", 
 √âe°
  },
 
-566 { "â1", 
+586 { "â1", 
 thªadã°
  },
 
-567 { "â2", 
+587 { "â2", 
 thªadã°2
  },
 
-568 { "â3", 
+588 { "â3", 
 thªadã°3
  },
 
-569 { "sy1", 
+589 { "sy1", 
 £mã°
  },
 
-572 { "sy2", 
+592 { "sy2", 
 lockã°
  },
 
-573 { "sy3", 
+593 { "sy3", 
 cvã°
  },
 
-574 #ifde‡
+594 #ifde‡
 UW
 
 
-575 { "uw1", 
+595 { "uw1", 
 uwlockã°1
  },
 
-579 { "fs1", 
+599 { "fs1", 
 f°e°
  },
 
-580 { "fs2", 
+600 { "fs2", 
 ªad°ªss
  },
 
-581 { "fs3", 
+601 { "fs3", 
 wrôe°ªss
  },
 
-582 { "fs4", 
+602 { "fs4", 
 wrôe°ªss2
  },
 
-583 { "fs5", 
+603 { "fs5", 
 ¸óã°ªss
  },
 
-586 { "gg", 
-¥öâe°mesßge
+606 { "gg", 
+ã°mesßge
  },
 
-588 { 
+608 { 
 NULL
 , NULL }
 
-596 
+616 
 	$cmd_di•©ch
 (*
 cmd
 )
 
-598 
+618 
 time_t
  
 bef‹e£cs
@@ -52617,7 +52677,7 @@ a·î£cs
 £cs
 ;
 
-599 
+619 
 uöt32_t
  
 bef‹í£cs
@@ -52627,31 +52687,31 @@ a·în£cs
 n£cs
 ;
 
-600 *
+620 *
 ¨gs
 [
 MAXMENUARGS
 ];
 
-601 
+621 
 «rgs
 =0;
 
-602 *
+622 *
 w‹d
 ;
 
-603 *
+623 *
 c⁄ãxt
 ;
 
-604 
+624 
 i
 , 
 ªsu…
 ;
 
-606 
+626 
 w‹d
  = 
 	`°πok_r
@@ -52661,13 +52721,13 @@ cmd
 c⁄ãxt
 );
 
-607 
+627 
 w‹d
  !
 NULL
 ;
 
-608 
+628 
 w‹d
  = 
 	`°πok_r
@@ -52677,21 +52737,21 @@ NULL
 c⁄ãxt
 )) {
 
-610 i‡(
+630 i‡(
 «rgs
  >
 MAXMENUARGS
 ) {
 
-611 
+631 
 	`k¥ötf
 ("CommandÜine hasÅoo many words\n");
 
-612  
+632  
 E2BIG
 ;
 
-614 
+634 
 ¨gs
 [
 «rgs
@@ -52699,11 +52759,11 @@ E2BIG
 w‹d
 ;
 
-617 i‡(
+637 i‡(
 «rgs
 ==0) {
 
-621 
+641 
 i
 =0; 
 cmdèbÀ
@@ -52711,7 +52771,7 @@ cmdèbÀ
 «me
 ; i++) {
 
-622 i‡(*
+642 i‡(*
 cmdèbÀ
 [
 i
@@ -52723,7 +52783,7 @@ i
 ¨gs
 [0], cmdtable[i].name)) {
 
-623 
+643 
 	`KASSERT
 (
 cmdèbÀ
@@ -52735,7 +52795,7 @@ func
 NULL
 );
 
-625 
+645 
 	`gëtime
 (&
 bef‹e£cs
@@ -52743,7 +52803,7 @@ bef‹e£cs
 bef‹í£cs
 );
 
-627 
+647 
 ªsu…
  = 
 cmdèbÀ
@@ -52757,7 +52817,7 @@ i
 ¨gs
 );
 
-629 
+649 
 	`gëtime
 (&
 a·î£cs
@@ -52765,7 +52825,7 @@ a·î£cs
 a·în£cs
 );
 
-630 
+650 
 	`gëöãrvÆ
 (
 bef‹e£cs
@@ -52773,49 +52833,49 @@ bef‹e£cs
 bef‹í£cs
 ,
 
-631 
+651 
 a·î£cs
 , 
 a·în£cs
 ,
 
-632 &
+652 &
 £cs
 , &
 n£cs
 );
 
-634 
+654 
 	`k¥ötf
 ("OperationÅook %lu.%09lu seconds\n",
 
-635 (Ë
+655 (Ë
 £cs
 ,
 
-636 (Ë
+656 (Ë
 n£cs
 );
 
-638  
+658  
 ªsu…
 ;
 
-642 
+662 
 	`k¥ötf
 ("%s: Comm™dÇŸ found\n", 
 ¨gs
 [0]);
 
-643  
+663  
 EINVAL
 ;
 
-644 
+664 
 	}
 }
 
-655 
+675 
 	$míu_execuã
 (*
 löe
@@ -52823,19 +52883,19 @@ löe
 ißrgs
 )
 
-657 *
+677 *
 comm™d
 ;
 
-658 *
+678 *
 c⁄ãxt
 ;
 
-659 
+679 
 ªsu…
 ;
 
-661 
+681 
 comm™d
  = 
 	`°πok_r
@@ -52845,13 +52905,13 @@ löe
 c⁄ãxt
 );
 
-662 
+682 
 comm™d
  !
 NULL
 ;
 
-663 
+683 
 comm™d
  = 
 	`°πok_r
@@ -52861,17 +52921,17 @@ NULL
 c⁄ãxt
 )) {
 
-665 i‡(
+685 i‡(
 ißrgs
 ) {
 
-666 
+686 
 	`k¥ötf
 ("OS/161 kî√l: %s\n", 
 comm™d
 );
 
-669 
+689 
 ªsu…
  = 
 	`cmd_di•©ch
@@ -52879,11 +52939,11 @@ comm™d
 comm™d
 );
 
-670 i‡(
+690 i‡(
 ªsu…
 ) {
 
-671 
+691 
 	`k¥ötf
 ("Míu comm™d faûed: %s\n", 
 	`°ªº‹
@@ -52891,51 +52951,51 @@ comm™d
 ªsu…
 ));
 
-672 i‡(
+692 i‡(
 ißrgs
 ) {
 
-673 
+693 
 	`∑nic
 ("FailureÖrocessing kernelárguments\n");
 
-677 
+697 
 	}
 }
 
-697 
+717 
 	$míu
 (*
 ¨gs
 )
 
-699 
+719 
 buf
 [64];
 
-701 
+721 
 	`míu_execuã
 (
 ¨gs
 , 1);
 
-704 
+724 
 	`k¥ötf
 ("OS/161 kernel [? for menu]: ");
 
-705 
+725 
 	`kgës
 (
 buf
 , (buf));
 
-706 
+726 
 	`míu_execuã
 (
 buf
 , 0);
 
-708 
+728 
 	}
 }
 
@@ -176608,8 +176668,8 @@ __END_DECLS
 .
 1
 /usr/include
-523
-17401
+524
+17439
 os161/build/install/hostinclude/hostcompat.h
 os161/build/install/include/assert.h
 os161/build/install/include/err.h
@@ -176809,6 +176869,7 @@ os161/kern/include/kern/wait.h
 os161/kern/include/lib.h
 os161/kern/include/limits.h
 os161/kern/include/mainbus.h
+os161/kern/include/printtestmessage.c
 os161/kern/include/proc.h
 os161/kern/include/queue.h
 os161/kern/include/setjmp.h
