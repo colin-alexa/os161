@@ -1,0 +1,25 @@
+In file included from ../../syscall/write.c:2:
+../../include/lib.h:92: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘dbflags’
+../../include/lib.h:118: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘randmax’
+../../include/lib.h:119: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘random’
+../../include/lib.h:125: error: expected ‘)’ before ‘size’
+../../include/lib.h:135: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘strlen’
+../../include/lib.h:144: error: expected declaration specifiers or ‘...’ before ‘size_t’
+../../include/lib.h:145: error: expected declaration specifiers or ‘...’ before ‘size_t’
+../../include/lib.h:146: error: expected declaration specifiers or ‘...’ before ‘size_t’
+../../include/lib.h:149: error: expected declaration specifiers or ‘...’ before ‘size_t’
+../../include/lib.h:149: error: format string argument not a string type
+../../include/lib.h:183: error: expected declaration specifiers or ‘...’ before ‘size_t’
+In file included from ../../syscall/write.c:4:
+../../include/syscall.h:50: error: expected declaration specifiers or ‘...’ before ‘userptr_t’
+../../include/syscall.h:50: error: expected declaration specifiers or ‘...’ before ‘vaddr_t’
+../../include/syscall.h:51: error: expected declaration specifiers or ‘...’ before ‘vaddr_t’
+../../include/syscall.h:59: error: expected ‘)’ before ‘user_seconds’
+../../include/syscall.h:62: error: expected declaration specifiers or ‘...’ before ‘size_t’
+../../include/syscall.h:65: error: expected declaration specifiers or ‘...’ before ‘size_t’
+../../syscall/write.c:14: error: expected declaration specifiers or ‘...’ before ‘size_t’
+../../syscall/write.c: In function ‘sys_write’:
+../../syscall/write.c:15: error: ‘size’ undeclared (first use in this function)
+../../syscall/write.c:15: error: (Each undeclared identifier is reported only once
+../../syscall/write.c:15: error: for each function it appears in.)
+cp: cannot stat ‘kernel’: No such file or directory

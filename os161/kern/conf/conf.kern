@@ -375,6 +375,8 @@ file      vfs/devnull.c
 file      syscall/loadelf.c
 file      syscall/runprogram.c
 file      syscall/time_syscalls.c
+file		 syscall/simple_syscalls.c
+file      syscall/write.c
 
 #
 # Startup and initialization
@@ -382,7 +384,7 @@ file      syscall/time_syscalls.c
 
 file      startup/main.c
 file      startup/menu.c
-file		 startup/hello.c
+file 		 startup/hello.c
 ########################################
 #                                      #
 #             Filesystems              #
@@ -435,6 +437,9 @@ file		test/tt3.c
 file		test/synchtest.c
 file		test/malloctest.c
 file		test/fstest.c
+file		test/mytest.c
+file		test/mythreadtest.c
+file		test/mylocktest.c
 optfile net	test/nettest.c
 # UW Mod
 file    test/uw-tests.c

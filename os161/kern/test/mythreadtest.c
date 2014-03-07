@@ -1,31 +1,30 @@
-
+#include <types.h>
+#include <lib.h>
+#include <thread.h>
+#include <synch.h>
+#include <test.h>
 
 static
-void
-thread_test_msg(int toprint)
-{
-	char name[16];
-	int i;
-   toprint = toprint < 10 ? toprint : -1;
-	snprintf(name, sizeof(name), "mythreadtest: %d", '0' + toprint);
+void thread_function(void *ptr, unsigned long value){
+	(void)value;
+	kprintf("Thread go");
+	char* cp = ptr;
+	*cp+='0';
+	//Doesn't seem to be doing exactly what I want, but hard to debug
+	//until printf has proper locks
+	kprintf(cp);	
 }
 
-static
-void
-my_thread_test(int argc, char** argv)
-{
-	   int n = *(argv[1]) - '0';
-		int i, result;
+int mythreadtest(int nargs, char **args){
+	kprintf("Running my thread test");
+	(void)nargs; //Avoid unused parameter warning
+	//args[0] is name of calling program
+	int n = (*args[1])-'0';
+	//The bottom loop doesn't seem to be running, or there's
+	//something wrong with the way we're launching threads
+	for (int i = 0; i < n; ++i){
+		thread_fork("thread test thread", NULL, thread_function, &i, 1);
+	}
 
-		for (i=0; i<n; ++i) {
-		   kprintf("My Threadtest");
-		   result = thread_fork(name, NULL,
-		 		                  thread_test_msg,
-										-2, i);
-
-			if (result) {
-				   panic("mythreadtest: thread_fork failed %s)\n",
-		    		strerror(result));
-		   }
-		}
+	return 0;
 }

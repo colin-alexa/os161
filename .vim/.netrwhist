@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/robcol15/os161/user/testbin/malloctest'
+let g:netrw_dirhist_2='/home/robcol15/os161/kern/syscall'
+let g:netrw_dirhist_3='/home/robcol15/os161/kern/include'
+let g:netrw_dirhist_4='/home/robcol15/os161/user/testbin/syscalltest'
+let g:netrw_dirhist_5='/home/robcol15/os161/kern/arch/mips/syscall'

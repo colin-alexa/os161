@@ -44,7 +44,7 @@
 #include "opt-synchprobs.h"
 #include "opt-sfs.h"
 #include "opt-net.h"
-#include "testmessage.c"
+
 /*
  * In-kernel menu and command dispatcher.
  */
@@ -450,8 +450,6 @@ cmd_opsmenu(int n, char **a)
 }
 
 static const char *testmenu[] = {
-	"[gg]  My \"Test\"						 ",
-	"[mtt] My thread test                ",
 	"[at]  Array test                    ",
 	"[bt]  Bitmap test                   ",
 	"[km1] Kernel malloc test            ",
@@ -470,6 +468,10 @@ static const char *testmenu[] = {
 	"[fs3] FS write stress       (4)     ",
 	"[fs4] FS write stress 2     (4)     ",
 	"[fs5] FS create stress      (4)     ",
+	"[mt]  My Test								 ",
+	"[mtt] My Thread Test					 ",
+	"[mlt] My Lock Test                  ",
+
 	NULL
 };
 
@@ -517,26 +519,6 @@ cmd_mainmenu(int n, char **a)
 
 ////////////////////////////////////////
 //
-// TEST for lab5
-
-//void printchars(char* word){
-//	for (int i=0; word[i] != 0; i++){
-//		kprintf(word[i]);
-//	}
-//	return;
-//}
-
-//int testmessage(int c, char** args){
-//	for(int i=0;i<c;i++){
-//		printchars(args[i]);
-//		kprintf('\n');
-//	}
-//	return 0;
-//}
-
-
-////////////////////////////////////////
-//
 // Command table.
 
 static struct {
@@ -577,6 +559,9 @@ static struct {
 	{ "kh",         cmd_kheapstats },
 
 	/* base system tests */
+	{ "mt", 		mytest },
+	{ "mtt",		mythreadtest },
+	{ "mlt",    mylocktest },
 	{ "at",		arraytest },
 	{ "bt",		bitmaptest },
 	{ "km1",	malloctest },
@@ -603,15 +588,6 @@ static struct {
 	{ "fs4",	writestress2 },
 	{ "fs5",	createstress },
 
-//////////////////////////////
-//
-// Tests that I've added
-//
-/////////
-
-	/*TEST from LAB5*/
-	{ "gg", testmessage },
-   { "mtt", my_thread_test },
 	{ NULL, NULL }
 };
 

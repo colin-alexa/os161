@@ -8,12 +8,15 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~Msle0~/\<args\>
+~MSle0~/\<args\>
+
+# Last Substitute String:
+$
 
 # Command Line History (newest to oldest):
-:wq
-:w
 :q
+:w
+:wq
 :q!
 :w bootstrap_test
 :set nu
@@ -36,16 +39,32 @@
 
 # Registers:
 "0	CHAR	0
-	int echoargs(void* ptr, unsigned long val){
-		kprintf(ptr);
-		kprintf(val);
-		return 0;
-	}
+	r
 "1	LINE	0
-	int echoargs(void* ptr, unsigned long val){
-		kprintf(ptr);
-		kprintf(val);
-		return 0;
+	
+	#include <kern/errno.h>
+	#include <lib.h>
+	#include <limits.h>
+	#include <syscall.h>
+	
+	/////////////////////////////
+	////
+	//// Because write returns the number of bytes written, all
+	////  bad returns are the ordinary MAGNITUDE for the error,
+	////  but are always NEGATIVE
+	////
+	
+	
+	int sys_write(int filehandle, const void *buf, size_t size){
+		if (size > KBUF_MAX){
+		    return -(EINVAL);
+	  	}
+		if (filehandle == 1 /* STDOUT_FILENO is undefined in kernel space, but it's probably going to remain '1' forever hehehe */){
+			 kprintf(buf);
+		 	 return size;
+	  	}
+		    			 	   	   
+	  	return -(EBADF);
 	}
 "2	LINE	0
 	int echoargs(void* ptr, unsigned long val){
@@ -53,22 +72,54 @@
 		kprintf(val);
 		return 0;
 	}
+"3	LINE	0
+	int echoargs(void* ptr, unsigned long val){
+		kprintf(ptr);
+		kprintf(val);
+		return 0;
+	}
 ""-	CHAR	0
-	r
+	e
 
 # File marks:
-'0  216  0  ~/os161/kern/thread/synch.c
-'1  1  0  ~/os161/kern/test/mythreadtest.c
-'2  614  26  ~/os161/kern/startup/menu.c
-'3  146  0  ~/os161/kern/test/threadtest.c
-'4  624  0  ~/os161/kern/startup/menu.c
-'5  1  0  ~/os161/kern/include/testmessage.c
-'6  12  0  ~/os161/kern/include/testmessage.c
-'7  75  0  ~/os161/kern/startup/menu.c
-'8  172  0  ~/os161/kern/startup/main.c
-'9  4  34  ~/bin/bootstrap
+'0  379  3  ~/os161/kern/conf/conf.kern
+'1  1  17  ~/os161/kern/syscall/write.c
+'2  71  0  ~/os161/kern/syscall/simple_syscalls.c
+'3  61  2  ~/os161/root/include/kern/limits.h
+'4  1  0  ~/os161/cd
+'5  121  0  ~/os161/kern/arch/mips/syscall/syscall.c
+'6  128  1  ~/os161/kern/arch/mips/syscall/syscall.c
+'7  1  0  ~/os161/kern/compile/ASST0/out
+'8  1  0  ~/os161/kern/compile/ASST0/e.out
+'9  124  5  ~/os161/kern/arch/mips/syscall/syscall.c
 
 # Jumplist (newest first):
+-'  379  3  ~/os161/kern/conf/conf.kern
+-'  1  0  ~/os161/kern/conf/conf.kern
+-'  1  17  ~/os161/kern/syscall/write.c
+-'  71  0  ~/os161/kern/syscall/simple_syscalls.c
+-'  1  0  ~/os161/kern/syscall/simple_syscalls.c
+-'  61  2  ~/os161/root/include/kern/limits.h
+-'  1  0  ~/os161/root/include/kern/limits.h
+-'  1  0  ~/os161/cd
+-'  121  0  ~/os161/kern/arch/mips/syscall/syscall.c
+-'  1  0  ~/os161/kern/arch/mips/syscall/syscall.c
+-'  128  1  ~/os161/kern/arch/mips/syscall/syscall.c
+-'  9  0  ~/os161/kern/arch/mips/syscall
+-'  1  0  ~/os161/kern/compile/ASST0/out
+-'  1  0  ~/os161/kern/compile/ASST0/e.out
+-'  124  5  ~/os161/kern/arch/mips/syscall/syscall.c
+-'  25  0  ~/os161/kern/syscall/write.c
+-'  70  1  ~/os161/kern/syscall/simple_syscalls.c
+-'  65  46  ~/os161/kern/syscall/simple_syscalls.c
+-'  62  39  ~/os161/kern/include/syscall.h
+-'  1  0  ~/os161/kern/include/syscall.h
+-'  51  33  ~/os161/kern/include/limits.h
+-'  1  0  ~/os161/kern/include/limits.h
+-'  94  0  ~/os161/kern/include/kern/syscall.h
+-'  1  0  ~/os161/kern/include/kern/syscall.h
+-'  62  0  ~/os161/kern/include/kern/limits.h
+-'  1  0  ~/os161/kern/include/kern/limits.h
 -'  216  0  ~/os161/kern/thread/synch.c
 -'  199  0  ~/os161/kern/thread/synch.c
 -'  1  0  ~/os161/kern/thread/synch.c
@@ -138,39 +189,108 @@
 -'  1  0  ~/os161/kern/startup/hello.c
 -'  52  13  ~/os161/kern/startup/main.c
 -'  108  0  ~/os161/kern/startup/main.c
--'  110  0  ~/os161/kern/startup/main.c
--'  51  19  ~/os161/kern/startup/main.c
--'  109  1  ~/os161/kern/startup/main.c
--'  61  0  ~/os161/kern/startup/main.c
--'  55  0  ~/os161/kern/startup/main.c
--'  14  0  ~/os161/kern/proc/proc.c
--'  1  0  ~/os161/kern/proc/proc.c
--'  385  21  ~/os161/kern/conf/conf.kern
--'  1  0  ~/os161/kern/conf/conf.kern
--'  54  0  ~/os161/kern/startup/main.c
--'  95  0  ~/os161/kern/startup/main.c
--'  131  12  ~/os161/kern/startup/main.c
--'  66  63  ~/README
--'  1  0  ~/README
--'  66  63  ~/README
--'  1  0  ~/README
--'  66  63  ~/README
--'  1  0  ~/README
--'  66  63  ~/README
--'  1  0  ~/README
--'  66  63  ~/README
--'  1  0  ~/README
--'  66  63  ~/README
--'  1  0  ~/README
--'  66  63  ~/README
--'  1  0  ~/README
--'  66  63  ~/README
--'  1  0  ~/README
--'  128  12  ~/os161/kern/startup/main.c
--'  66  63  ~/README
--'  1  0  ~/README
 
 # History of marks within files (newest to oldest):
+
+> ~/os161/kern/conf/conf.kern
+	"	379	3
+	^	379	0
+	.	379	0
+	+	385	21
+	+	379	0
+
+> ~/os161/user/testbin/palin/palin.c
+	"	198	0
+
+> ~/os161/kern/syscall/write.c
+	"	1	17
+	^	1	18
+	.	1	17
+	+	25	20
+	+	13	0
+	+	15	0
+	+	16	0
+	+	17	0
+	+	18	0
+	+	19	0
+	+	20	0
+	+	21	0
+	+	22	0
+	+	23	0
+	+	24	0
+	+	25	0
+	+	18	0
+	+	19	0
+	+	20	0
+	+	21	0
+	+	22	0
+	+	24	0
+	+	25	0
+	+	1	17
+
+> ~/os161/kern/syscall/simple_syscalls.c
+	"	71	0
+	.	72	0
+	+	71	0
+	+	67	2
+	+	68	2
+	+	69	2
+	+	70	2
+	+	71	1
+	+	72	0
+
+> ~/os161/kern/compile/ASST0/e
+	"	1	0
+
+> ~/os161/root/include/kern/limits.h
+	"	61	2
+	^	61	3
+	.	61	2
+	+	61	2
+
+> ~/os161/cd
+	"	1	0
+
+> ~/os161/kern/arch/mips/syscall/syscall.c
+	"	121	0
+	^	121	0
+	.	121	0
+	+	128	0
+	+	127	7
+	+	121	1
+	+	128	0
+	+	121	0
+
+> ~/os161/kern/compile/ASST0/out
+	"	1	0
+
+> ~/os161/kern/compile/ASST0/e.out
+	"	1	0
+
+> ~/os161/kern/include/syscall.h
+	"	62	39
+	^	62	40
+	.	62	39
+	+	62	39
+
+> ~/os161/kern/include/limits.h
+	"	51	33
+	^	51	34
+	.	51	33
+	+	52	0
+	+	51	33
+
+> ~/os161/kern/include/kern/syscall.h
+	"	94	0
+
+> ~/os161/kern/include/kern/limits.h
+	"	62	0
+	^	62	0
+	.	61	36
+	+	59	0
+	+	61	32
+	+	60	119
+	+	61	36
 
 > ~/os161/kern/thread/synch.c
 	"	216	0
@@ -498,9 +618,6 @@
 > ~/os161/kern/proc/proc.c
 	"	198	11
 
-> ~/os161/kern/arch/mips/syscall/syscall.c
-	"	149	1
-
 > ~/os161/kern/arch/sys161/dev/lamebus_machdep.c
 	"	262	0
 
@@ -519,12 +636,6 @@
 	+	5	25
 	+	6	0
 	+	5	25
-
-> ~/os161/kern/conf/conf.kern
-	"	385	21
-	^	385	22
-	.	385	21
-	+	385	21
 
 > ~/README
 	"	66	63

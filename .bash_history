@@ -1,109 +1,3 @@
-cp ~/sys161/sys161.conf sys161.conf
-sys161 kernel-ASSTO
-sys161 kernel-ASST0
-quit
-ls
-git ini
-git init
-git add .
-git commit -m "saving initial state, in case I fuck shit up"
-git config --global user.email "robcol15@evergreen.edu"
-git config --global user.name "Colin Robinson"
-git commit -m "saving initial state, in case I fuck shit up"
-git remote add github http://github.com/colinarobinson/os161.git
-git push -u github master
-find main.c
-man find
-find */main.c
-find **/main.c
-man find
-find -L ./ main.c
-ssh login.cs.jhu.edu
-ping google.com
-ssh ada.evergreen.edu
-ls -a
-./slackware-install
-sh ./slackware-install
-version
-v
-?
-help
-find -L ./ main
-find -L ./ main.*
-ls
-ls -lafin
-ls
-cd os161/
-find -name main.c
-cd kern/startup
-vi main.c 
-c d~
-cd ~
-cd os161/
-pmake
-pmake install
-cd root/
-sys161 kernel
-cd ~/os161/
-cd ../compile/ASST0
-cd kern/compile/
-pmake
-cd ASST0/
-pmake
-pmake install
-cd ../..
-cd ..
-cd root
-sys161 kernel
-cd ~
-git add .
-git commit -m "lab 2; change banner in main.c"
-git push github
-cd os161/
-ls
-cd root
-ls
-cd ../
-cd ..
-cd .
-cd ./
-cd -
-cd os161/root/man/
-cd ./././
-cd ../
-cd .....
-cd ...
-cd ..
-cd..
-cd ..
-exit
-ls
-cd os161/
-ls
-cd kern/
-ls
-find -name main.c
-cd startup/
-vi main.c
-vi hello.c
-vi main.c
-find -name conf.kern
-cd ../../
-find -name conf.kern
-cd kern/conf/
-vi conf.kern
-./config ASSTO
-./config ASST0
-cd ../
-cd compile/ASST0/
-pmake depend
-pmake
-pmake install
-cd ~
-cd os161/
-sys161 kernel
-cd ./
-cd ../
 sys161 kernel
 cd sys161
 sys161 kernel
@@ -498,3 +392,109 @@ sys161 kernel
 bootstrap | egrep ?rror
 sys161 kernel
 bootstrap | egrep ?rror
+git reset --hard HEAD~1
+git pull
+cd os161/
+ls
+git reset --hard HEAD
+git reset --hard HEAD~1
+bootstrap
+cd kern
+cd os161/kern/compile/
+cd ASST0/
+pmake depend
+pmake
+pmake install
+cd ../../../
+cscope -R
+cd kern/conf
+ls
+vi conf.kern
+cd ../../
+cd kern
+ls
+cd include/
+ls
+cd kern
+ls
+vi limits.h
+vi syscall.h 
+cd ../
+vi limits.h 
+ls kern
+vi syscall.h 
+cd ../syscall/
+ls
+vi simple_syscalls.c 
+exit
+cd os161/
+bootstrap
+exit
+ps -u robcol15
+kill 19608 19619 27154 27155 27238 27321 27518 27601 27684
+tmux
+exit
+tmux
+cd os
+cd os161/
+cd kern/syscall/
+ls
+cd ../
+cd include/
+ls
+cd ../
+cd arch/mips/
+vi syscall/
+cd ../../compile/ASST0/
+pmake depend
+pmake
+pmake depend
+pmake
+pmake depend
+pmake
+pmake depend 2> e
+vi e
+ls
+rm e
+bootstrap
+pmake
+bootstrap
+pmake
+pmake depend 2> e
+pmake
+cd ../../
+cd ../root/
+sys161 kernel
+ls
+cd testbin/
+ls
+ls -a
+cd ../../
+cd user/testbin/
+ls
+cd palin/
+ls
+vi palin.c 
+exit
+cd os161/kern/arch/mips/
+cd syscall/
+vi syscall.c 
+cd ../
+cd 
+cd os161/
+ls
+vi cd
+rm cd
+vi root/include/kern/limits.h 
+cd kern/syscall/
+ls
+cat write.c >> simple_syscalls.c 
+cd ../
+cd conf
+vi conf.kern 
+cd ../syscall/
+vi simple_syscalls.c 
+vi write.c 
+cd ../conf/
+vi conf.kern 
+exit

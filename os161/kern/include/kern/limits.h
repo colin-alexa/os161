@@ -57,6 +57,8 @@
 /* Max bytes for an exec function */
 #define __ARG_MAX       (64 * 1024)
 
+/* Max number of bytes to write in a single call. Currently arbitrary, may come across a compelling specific value later */
+#define __KBUF_MAX      (1024 * 1024)
 
 /*
  * Important for system behavior, but not a big part of the API.

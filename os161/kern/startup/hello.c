@@ -2,5 +2,5 @@
 #include <lib.h>
 
 void hello(){
- kprintf("Hello, World\n\n");
+	kprintf("Hello World!\n");
 }

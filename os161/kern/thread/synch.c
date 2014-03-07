@@ -159,12 +159,26 @@ lock_create(const char *name)
 
         lock->lk_name = kstrdup(name);
         if (lock->lk_name == NULL) {
-                kfree(lock);
+                kfree(lock->lk_name);
+			  		 kfree(lock);
                 return NULL;
         }
         
-        // add stuff here as needed
-        
+		  //Additions start here
+		  
+		  
+		  lock->lk_wchan = wchan_create(lock->lk_name);
+		  
+		  if (lock->lk_wchan == NULL){
+		  		kfree(lock->lk_name);
+				kfree(lock->lk_wchan);
+				kfree(lock);
+				return NULL;
+		  }
+		  
+		  spinlock_init(&lock->lk_spinlock);
+		  
+		  lock->lk_is_locked = 0;
         return lock;
 }
 
@@ -172,37 +186,73 @@ void
 lock_destroy(struct lock *lock)
 {
         KASSERT(lock != NULL);
-
-        // add stuff here as needed
         
         kfree(lock->lk_name);
-        kfree(lock);
+		  kfree(lock->lk_wchan);
+
+		  spinlock_cleanup(&lock->lk_spinlock);
+       
+		  //and end here
+		  kfree(lock);
+
+
+
 }
 
 void
 lock_acquire(struct lock *lock)
 {
-        // Write this
+		  KASSERT(lock!=NULL);
 
-        (void)lock;  // suppress warning until code gets written
+		  if (lock->lk_thread==curthread && curthread!=NULL){
+		  		//The thread owner should not be locking it
+			   kprintf("Lock acquired by same thread twice: %s!\n", curthread->t_name);
+		  }
+
+
+		  //Thread can't be in an interrupt state (taken from semaphore code)
+		  KASSERT(curthread->t_in_interrupt == false);
+
+		  spinlock_acquire(&lock->lk_spinlock);
+		  while(lock->lk_is_locked){
+			   //If we're ever awake and the lock is locked:
+		 		wchan_lock(lock->lk_wchan);
+				spinlock_release(&lock->lk_spinlock);
+				wchan_sleep(lock->lk_wchan); //also unlocks wchan
+				//This is where we wake up if we're woken from our wchan
+				spinlock_acquire(&lock->lk_spinlock);
+		  }
+		
+		  KASSERT(!lock->lk_is_locked); //We shouldn't get here with a locked lock
+		  lock->lk_is_locked = 1;
+		  lock->lk_thread = curthread;
+		  spinlock_release(&lock->lk_spinlock);
 }
 
 void
 lock_release(struct lock *lock)
 {
-        // Write this
+		  KASSERT(lock!=NULL);
 
-        (void)lock;  // suppress warning until code gets written
+		  if (lock->lk_thread!=curthread){
+		 	 //Locks should not be unlocked by strange threads.
+			 kprintf("Lock unlocked by wrong thread: %s!\n", curthread->t_name); 
+		  }
+		  
+		  spinlock_acquire(&lock->lk_spinlock);
+		  lock->lk_is_locked = 0;
+		  lock->lk_thread = NULL;
+		  wchan_wakeone(lock->lk_wchan);
+		  spinlock_release(&lock->lk_spinlock);
+
 }
-
 bool
 lock_do_i_hold(struct lock *lock)
 {
-        // Write this
-
-        (void)lock;  // suppress warning until code gets written
-
-        return true; // dummy until code gets written
+		  KASSERT(lock!=NULL);
+			
+		  
+        return lock->lk_thread==curthread;
 }
 
 ////////////////////////////////////////////////////////////
